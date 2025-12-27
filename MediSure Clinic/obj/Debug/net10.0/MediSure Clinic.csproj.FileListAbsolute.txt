@@ -1,0 +1,14 @@
+D:\Test\MediSure Clinic\bin\Debug\net10.0\MediSure Clinic.exe
+D:\Test\MediSure Clinic\bin\Debug\net10.0\MediSure Clinic.deps.json
+D:\Test\MediSure Clinic\bin\Debug\net10.0\MediSure Clinic.runtimeconfig.json
+D:\Test\MediSure Clinic\bin\Debug\net10.0\MediSure Clinic.dll
+D:\Test\MediSure Clinic\bin\Debug\net10.0\MediSure Clinic.pdb
+D:\Test\MediSure Clinic\obj\Debug\net10.0\MediSure Clinic.GeneratedMSBuildEditorConfig.editorconfig
+D:\Test\MediSure Clinic\obj\Debug\net10.0\MediSure Clinic.AssemblyInfoInputs.cache
+D:\Test\MediSure Clinic\obj\Debug\net10.0\MediSure Clinic.AssemblyInfo.cs
+D:\Test\MediSure Clinic\obj\Debug\net10.0\MediSure Clinic.csproj.CoreCompileInputs.cache
+D:\Test\MediSure Clinic\obj\Debug\net10.0\MediSure Clinic.dll
+D:\Test\MediSure Clinic\obj\Debug\net10.0\refint\MediSure Clinic.dll
+D:\Test\MediSure Clinic\obj\Debug\net10.0\MediSure Clinic.pdb
+D:\Test\MediSure Clinic\obj\Debug\net10.0\MediSure Clinic.genruntimeconfig.cache
+D:\Test\MediSure Clinic\obj\Debug\net10.0\ref\MediSure Clinic.dll

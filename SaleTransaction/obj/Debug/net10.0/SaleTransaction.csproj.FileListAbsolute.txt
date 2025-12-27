@@ -1,0 +1,14 @@
+D:\Test\SaleTransaction\bin\Debug\net10.0\SaleTransaction.exe
+D:\Test\SaleTransaction\bin\Debug\net10.0\SaleTransaction.deps.json
+D:\Test\SaleTransaction\bin\Debug\net10.0\SaleTransaction.runtimeconfig.json
+D:\Test\SaleTransaction\bin\Debug\net10.0\SaleTransaction.dll
+D:\Test\SaleTransaction\bin\Debug\net10.0\SaleTransaction.pdb
+D:\Test\SaleTransaction\obj\Debug\net10.0\SaleTransaction.GeneratedMSBuildEditorConfig.editorconfig
+D:\Test\SaleTransaction\obj\Debug\net10.0\SaleTransaction.AssemblyInfoInputs.cache
+D:\Test\SaleTransaction\obj\Debug\net10.0\SaleTransaction.AssemblyInfo.cs
+D:\Test\SaleTransaction\obj\Debug\net10.0\SaleTransaction.csproj.CoreCompileInputs.cache
+D:\Test\SaleTransaction\obj\Debug\net10.0\SaleTransaction.dll
+D:\Test\SaleTransaction\obj\Debug\net10.0\refint\SaleTransaction.dll
+D:\Test\SaleTransaction\obj\Debug\net10.0\SaleTransaction.pdb
+D:\Test\SaleTransaction\obj\Debug\net10.0\SaleTransaction.genruntimeconfig.cache
+D:\Test\SaleTransaction\obj\Debug\net10.0\ref\SaleTransaction.dll
