@@ -1,20 +1,19 @@
 
 /// <summary>
-/// <para>)
-/// •	InvoiceNo (string) — unique identifier (example: INV1001)
-///•	CustomerName(string)
-///•	ItemName(string)
-///•	Quantity(int)
-///•	PurchaseAmount(decimal) — total purchase cost for the invoice(not per-unit)
-///•	SellingAmount(decimal) — total selling amount for the invoice(not per-unit)
-///•	ProfitOrLossStatus(string) — PROFIT / LOSS / BREAK-EVEN(calculated)
-///•	ProfitOrLossAmount(decimal) — calculated
-///•	ProfitMarginPercent(decimal) — calculated(relative to PurchaseAmount)
+/// <para>
+/// QuickMart Traders is a console-based billing and profit analysis system
+/// designed to record sales invoices and evaluate business performance.
+/// </para>
+/// <para>
+/// The application enables users to create transactions, automatically
+/// calculate profit or loss values, view the most recent invoice, and
+/// recalculate results whenever required.
 /// </para>
 /// </summary>
 using System;
 namespace QuickMartTraders
-{ 
+{
+    #region class to represent a sale transaction
     public class SaleTransaction
     {
         //class properties
@@ -30,8 +29,13 @@ namespace QuickMartTraders
         public static SaleTransaction LastTransaction;
         public static bool HasLastTransaction = false;
     }
+    #endregion
 
-    //class to handle transaction operations
+    #region method signatures for transaction operations
+    /// <summary>
+    /// Captures user input for a new sales transaction, validates all values,
+    /// calculates profit or loss, and stores the transaction as the latest record.
+    /// </summary>
     public class TransactionService
     {
         //method to create a new transaction
@@ -62,7 +66,6 @@ namespace QuickMartTraders
                 Console.WriteLine("Quantity must be greater than 0.");
                 return;
             }
-
             Console.Write("Enter Purchase Amount (total): ");
             //  Validate PurchaseAmount is a positive decimal
             if (!decimal.TryParse(Console.ReadLine(), out saleTransaction.PurchaseAmount) || saleTransaction.PurchaseAmount <= 0)
@@ -70,27 +73,32 @@ namespace QuickMartTraders
                 Console.WriteLine("Purchase Amount must be greater than 0.");
                 return;
             }
-
             Console.Write("Enter Selling Amount (total): ");
             if (!decimal.TryParse(Console.ReadLine(), out saleTransaction.SellingAmount) || saleTransaction.SellingAmount < 0)
             {
                 Console.WriteLine("Selling Amount must be zero or greater.");
                 return;
             }
+            #endregion
 
+            #region main logic to calculate profit/loss
             //perform calculations
             Calculate(saleTransaction);
-
             //store the last transaction
             SaleTransaction.LastTransaction = saleTransaction;
             SaleTransaction.HasLastTransaction = true;
-
             Console.WriteLine("\nTransaction saved successfully.");
             PrintCalculation(saleTransaction);
         }
+        #endregion
 
-        //method to view the last transaction
+        #region method to view last transaction
+        /// <summary>
+        /// Displays the details and profit or loss summary of the most recent
+        /// sales transaction stored in the system.
+        /// </summary>
         public void ViewTransaction()
+
         {
             if (!SaleTransaction.HasLastTransaction)
             {
@@ -112,8 +120,12 @@ namespace QuickMartTraders
             Console.WriteLine("Profit Margin (%): " + saleTransaction.ProfitMarginPercent);
             Console.WriteLine("--------------------------------------------");
         }
-
-        //method to recalculate profit/loss and print
+        #endregion
+        #region method to recalculate profit/loss
+        /// <summary>
+        /// Recomputes the profit or loss values for the last recorded transaction
+        /// and prints the updated calculation results.
+        /// </summary>
         public void Recalculate()
         {
             if (!SaleTransaction.HasLastTransaction)
@@ -125,8 +137,13 @@ namespace QuickMartTraders
             Calculate(SaleTransaction.LastTransaction);
             PrintCalculation(SaleTransaction.LastTransaction);
         }
-
-        //method to perform profit/loss calculations
+        #endregion
+        #region private helper methods
+        /// <summary>
+        /// Calculates the profit or loss amount, status, and profit margin percentage
+        /// based on the purchase and selling amounts of the provided transaction.
+        /// </summary>
+        /// <param name="saleTransaction">The sales transaction for which the calculation is performed.</param>
         private void Calculate(SaleTransaction saleTransaction)
         {
             //determine profit/loss status and amounts
@@ -149,7 +166,13 @@ namespace QuickMartTraders
             saleTransaction.ProfitMarginPercent = (saleTransaction.ProfitOrLossAmount / saleTransaction.PurchaseAmount) * 100;
         }
 
-        //method to print calculation results
+        #endregion
+        #region method to print calculation results
+        /// <summary>
+        /// Prints the calculated profit or loss status, amount, and profit margin
+        /// percentage for the specified sales transaction.
+        /// </summary>
+        /// <param name="saleTransaction">The transaction whose calculation results are printed.</param>
         private void PrintCalculation(SaleTransaction saleTransaction)
         {
             Console.WriteLine("Status: " + saleTransaction.ProfitOrLossStatus);
@@ -157,5 +180,6 @@ namespace QuickMartTraders
             Console.WriteLine("Profit Margin (%): " + saleTransaction.ProfitMarginPercent);
             Console.WriteLine("------------------------------------------------------");
         }
+        #endregion
     }
 }

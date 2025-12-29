@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Test\\MediSure Clinic\\",
+  "WorkspaceRootPath": "C:\\Users\\Anuska Palit\\OneDrive\\Desktop\\Test\\MediSure Clinic\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F516BD54-1887-41B2-A9CF-DED6F9200BF9}|MediSure Clinic.csproj|d:\\test\\medisure clinic\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F516BD54-1887-41B2-A9CF-DED6F9200BF9}|MediSure Clinic.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anuska Palit\\OneDrive\\Desktop\\Test\\MediSure Clinic\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Anuska Palit\\OneDrive\\Desktop\\Test\\MediSure Clinic\\PatientBill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:PatientBill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +18,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientBill.cs",
+              "DocumentMoniker": "C:\\Users\\Anuska Palit\\OneDrive\\Desktop\\Test\\MediSure Clinic\\PatientBill.cs",
+              "RelativeDocumentMoniker": "PatientBill.cs",
+              "ToolTip": "C:\\Users\\Anuska Palit\\OneDrive\\Desktop\\Test\\MediSure Clinic\\PatientBill.cs",
+              "RelativeToolTip": "PatientBill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-29T06:04:29.753Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Test\\MediSure Clinic\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Anuska Palit\\OneDrive\\Desktop\\Test\\MediSure Clinic\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Test\\MediSure Clinic\\Program.cs",
+              "ToolTip": "C:\\Users\\Anuska Palit\\OneDrive\\Desktop\\Test\\MediSure Clinic\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-27T09:39:13.071Z",
               "EditorCaption": ""

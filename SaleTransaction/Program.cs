@@ -1,5 +1,17 @@
-﻿using QuickMartTraders;
-//class containing application entry point
+﻿/// <summary>
+/// <para>
+/// Entry point for the QuickMart Traders console application.
+/// </para>
+/// <para>
+/// This program provides a menu-driven interface to create sales transactions,
+/// view the latest invoice, and calculate profit or loss details.
+/// </para>
+/// </summary> 
+using QuickMartTraders;
+/// <summary>
+/// Contains the application entry point and controls the main menu loop
+/// for user interaction with the QuickMart Traders system.
+/// </summary>
 class Program
 {
     //application entry point
@@ -9,6 +21,7 @@ class Program
         TransactionService service = new TransactionService();
         bool exit = false;
 
+        #region menu loop
         //application loop
         while (!exit)
         {
@@ -44,5 +57,6 @@ class Program
                     break;
             }
         }
+        #endregion
     }
 }

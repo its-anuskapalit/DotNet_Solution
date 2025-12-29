@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MediSure Clinic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8283d2a67ceb33f54fae58731fb158bccef8c493")]
 [assembly: System.Reflection.AssemblyProductAttribute("MediSure Clinic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MediSure Clinic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

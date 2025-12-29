@@ -1,21 +1,21 @@
 ﻿using System;
-///<summary>
-/// MediSureClinic namespace to encapsulate billing related classes
+/// <summary>
 /// <para>
-///•	BillId (string) — unique identifier (example: BILL1001)
-///•	PatientName(string)
-///•	HasInsurance(bool) — true if the patient is insured
-///•	ConsultationFee(decimal)
-///•	LabCharges(decimal)
-///•	MedicineCharges(decimal)
-///•	GrossAmount(decimal) — calculated(not typed by user)
-///•	DiscountAmount(decimal) — calculated(not typed by user)
-///•	FinalPayable(decimal) — calculated(not typed by user)
+/// The MediSure_Clinic namespace contains all classes required for managing
+/// patient billing in the MediSure Clinic application.
+/// </para>
+/// <para>
+/// It supports bill creation, insurance-based discount calculation,
+/// final payable computation, and viewing or clearing the latest bill.
 /// </para>
 /// </summary>
 namespace MediSure_Clinic
 {
-    //class to store bill properties
+    #region class to store properties
+    /// <summary>
+    /// Represents a patient billing record containing consultation,
+    /// laboratory, and medicine charges along with calculated billing totals.
+    /// </summary>
     public class PatientBill
     {
         //bill properties
@@ -31,9 +31,14 @@ namespace MediSure_Clinic
         public static PatientBill LastBill;
         public static bool HasLastBill = false;
     }
-    // class to calculate the billings
+    #endregion
+    /// <summary>
+    /// Provides operations to create, calculate, view, and clear patient bills
+    /// within the MediSure Clinic billing system.
+    /// </summary>
     public class BillingService
     {
+        #region method to create bill
         //method to create a new bill
         public void CreateBill()
         {
@@ -93,8 +98,12 @@ namespace MediSure_Clinic
             Console.WriteLine("\nBill created successfully.");
             PrintCalculation(bill);
         }
-
-        //method to view the last bill
+        #endregion
+        #region method to view bill
+        /// <summary>
+        /// Displays the complete details of the most recently created patient bill,
+        /// including all charges, discount applied, and the final payable amount.
+        /// </summary>
         public void ViewBill()
         {
             if (!PatientBill.HasLastBill)
@@ -118,14 +127,25 @@ namespace MediSure_Clinic
             Console.WriteLine("Final Payable: " + bill.FinalPayable);
             Console.WriteLine("--------------------------------");
         }
-        //method to clear the last bill
+        #endregion
+        #region method to clear bill
+        /// <summary>
+        /// Clears the most recently stored patient bill and resets the billing state,
+        /// indicating that no bill is currently available for viewing or recalculation.
+        /// </summary>
         public void ClearBill()
         {
             PatientBill.LastBill = null;
             PatientBill.HasLastBill = false;
             Console.WriteLine("Last bill cleared.");
         }
-        //method to calculate the bill amounts
+        #endregion
+        #region method to calculate the bill
+        /// <summary>
+        /// Computes the gross amount, insurance-based discount, and final payable
+        /// amount for the specified patient bill.
+        /// </summary>
+        /// <param name="bill">The patient bill for which billing totals are calculated.</param>
         private void CalculateBill(PatientBill bill)
         {
             bill.GrossAmount = bill.ConsultationFee + bill.LabCharges + bill.MedicineCharges;
@@ -137,7 +157,13 @@ namespace MediSure_Clinic
 
             bill.FinalPayable = bill.GrossAmount - bill.DiscountAmount;
         }
-        //method to print the calculation details
+        #endregion
+        #region method for printing
+        /// <summary>
+        /// Prints the calculated gross amount, discount amount, and final payable
+        /// amount for the specified patient bill.
+        /// </summary>
+        /// <param name="bill">The patient bill whose calculated values are displayed.</param>
         private void PrintCalculation(PatientBill bill)
         {
             Console.WriteLine("Gross Amount: " + bill.GrossAmount);
@@ -146,4 +172,5 @@ namespace MediSure_Clinic
             Console.WriteLine("------------------------------------------------------------");
         }
     }
+    #endregion
 }
